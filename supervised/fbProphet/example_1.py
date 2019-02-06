@@ -4,9 +4,8 @@ matplotlib.use('TkAgg')
 from fbprophet import Prophet
 
 
-print 'hallo'
 
-df = pd.read_csv('example_1_data.csv')
+df = pd.read_csv('../../data/dataset_1.csv')
 print(df.head())
 
 
