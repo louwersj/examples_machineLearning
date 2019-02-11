@@ -36,10 +36,6 @@ plot1.set_xlabel('GDP per capita')
 # Specify background color for the axis/plot
 plot1.set_axis_bgcolor("lightslategray")
 
-
-
-
-
-
+# save the plotted figure to the local disk
 plt.savefig('plt_simple_example_4.png')
 
