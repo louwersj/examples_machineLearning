@@ -4,7 +4,7 @@ __license__ = "MIT"
 __email__ = "louwersj@gmail.com"
 
 ''' 
-    This example code is based a private example code and comes as-is without any warranty under the mentioned license.
+    This example code is a private example code and comes as-is without any warranty under the mentioned license.
 
     DO NOTE : due to a 'bug' when using a virtualenv in combination with matplotlib on MacOS we have stated the used
     backend explicitly using matplotlib.use('agg') which might not be required in every situation and might not work
