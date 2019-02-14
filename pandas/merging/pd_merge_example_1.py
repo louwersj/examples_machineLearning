@@ -7,7 +7,7 @@ __email__ = "louwersj@gmail.com"
     This example code is a private example code and comes as-is without any warranty under the mentioned license.
 
     This example shows how to load two datasets each into their own individual dataframe and merge them into a new 
-    dataframe based upon two columns that both datasets have in common. 
+    dataframe based upon two columns that both datasets have in common.
 '''
 
 import pandas as pd
