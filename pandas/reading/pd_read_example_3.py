@@ -12,10 +12,8 @@ __email__ = "louwersj@gmail.com"
 
 import pandas as pd
 
-# Load the first sheet of the JSON file into a data frame
-#df0 = pd.read_json('https://raw.githubusercontent.com/louwersj/examples_machineLearning/master/data/dataset_6.json', orient='columns')
+# load the json structure into a pandas DataFrame based upon a remote json file
 df0 = pd.read_json('https://raw.githubusercontent.com/louwersj/examples_machineLearning/master/data/dataset_6.json', orient='columns')
-
 print ('show the content of the dataframe containing data from the remote .json file')
 print(df0.head())
 
