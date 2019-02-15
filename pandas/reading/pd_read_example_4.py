@@ -12,27 +12,26 @@ __email__ = "louwersj@gmail.com"
     data which resides under items. By default ORDS JSON structures also contain elements like hasMore, limit, offset, 
     count and links. In our case we do not want to capture this information within our DataFrame, we are only interested 
     in the item elements. 
-    
-    The data can also be found in the data directory as dataset_7.json to make sure you can use this example even in case
-    you do not have an Oracle Database with ORDS in place and still want to test it. You can either place the JSON file 
-    on a HTTP server or you can load it directly from file if required. 
-'''
 
+    this example is basically the same as pd_read_example_3.py with the difference that we load the JSON from local
+    disk instead of retrieving it from a remote endpoint using a http connections. 
+'''
 
 import json
 from urllib2 import urlopen
 from pandas.io.json import json_normalize
 
 # Fetch the data from the remote ORDS endpoint
-apiResponse = urlopen("http://192.168.33.10:8080/ords/pandas_test/test/employees")
-apiResponseFile = apiResponse.read().decode('utf-8', 'replace')
+#apiResponse = urlopen("http://192.168.33.10:8080/ords/pandas_test/test/employees")
+#apiResponseFile = apiResponse.read().decode('utf-8', 'replace')
 
 # load the JSON data we fetched from the ORDS endpoint into a dict
-jsonData = json.loads(apiResponseFile)
+#jsonData = json.loads('../../data/dataset_7.json')
 
 # load the dict containing the JSON data into a DataFrame by using json_normalized, do note we only use 'items'
-df = json_normalize(jsonData['items'])
+#df = json_normalize(jsonData['items'])
+df0 = json_normalize('../../data/dataset_6.json'['items'])
 
 # show the evidence we received the data from the ORDS endpoint.
-print (df.head())
+print (df0.head())
 
