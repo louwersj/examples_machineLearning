@@ -30,7 +30,8 @@ apiResponseFile = apiResponse.read().decode('utf-8', 'replace')
 # load the JSON data we fetched from the ORDS endpoint into a dict
 jsonData = json.loads(apiResponseFile)
 
-# load the dict containing the JSON data into a DataFrame by using json_normalized, do note we only use 'items'
+# load the dict containing the JSON data into a DataFrame by using json_normalized.
+# do note we only use 'items'
 df = json_normalize(jsonData['items'])
 
 # show the evidence we received the data from the ORDS endpoint.
