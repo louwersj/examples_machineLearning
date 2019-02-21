@@ -4,17 +4,15 @@ import matplotlib.pyplot as plt
 #style.use("ggplot")
 from sklearn.cluster import KMeans
 
-#x = [1, 5, 1.5, 8, 1, 9]
-#y = [2, 8, 1.8, 8, 0.6, 11]
+value_x = [1, 5, 1.5, 8, 1, 9, 3, 5, 2, 7, 4, 6, 9, 6, 3, 1, 9]
+value_y = [2, 8, 1.8, 8, 0.6, 11, 2, 6, 3, 8, 5, 9, 2, 5, 1, 8, 5]
 
-X = np.array([[1, 2],
-              [5, 8],
-              [1.5, 1.8],
-              [8, 8],
-              [1, 0.6],
-              [9, 11]])
 
-kmeans = KMeans(n_clusters=2)
+# build a np array based upon value_x and value_y
+X = np.column_stack((value_x, value_y))
+
+# state the number of clusters we do want to find.
+kmeans = KMeans(n_clusters=3)
 kmeans.fit(X)
 
 centroids = kmeans.cluster_centers_
